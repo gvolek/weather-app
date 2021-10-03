@@ -4,19 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App Wk4HW</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/dcab553161.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Hello Test</h1>
+      <div class="card">
+        <h1>☁️Weather☁️</h1>
+        <form id="search-engine" class="search">
+          <div class="row">
+            <div class="col-8 col-md">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter City"
+                autofocus="on"
+                id="search-city-input"
+              />
+            </div>
+            <div class="col-2">
+              <button
+                input
+                type="submit"
+                class="btn btn-secondary"
+                value="search"
+                id="search-button"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <br />
+        <button id="current-location">Click Here for Current Location</button>
+        <h2 id="city">City</h2>
+
+        <ul class="CurrentDetails">
+          <span id="CurrentTemp"> 75°</span>
+          <a>°F </a>
+          <li id="CurrentDate">Current Date</li>
+          <li>Description: <span id="description"><span></li>
+          <li>Wind: <span id=wind></span> mph</li>
+        </ul>
+        <br />
+        <div class="row">
+          <div class="col-2">
+            <div class="DayOfTheWk">Mon</div>
+            <div class="icon"><i class="fas fa-snowflake"></i></div>
+            <div class="Temperature">25°F</div>
+          </div>
+          <div class="col-2">
+            <div class="DayOfTheWk">Tue</div>
+            <div class="icon"><i class="fas fa-snowflake"></i></div>
+            <div class="Temperature">30°F</div>
+          </div>
+          <div class="col-2">
+            <div class="DayOfTheWk">Wed</div>
+            <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+            <div class="Temperature">45°F</div>
+          </div>
+          <div class="col-2">
+            <div class="DayOfTheWk">Thru</div>
+            <div class="icon"><i class="far fa-sun"></i></div>
+            <div class="Temperature">50°F</div>
+          </div>
+          <div class="col-2">
+            <div class="DayOfTheWk">Fri</div>
+            <div class="icon"><i class="far fa-sun"></i></div>
+            <div class="Temperature">57°F</div>
+          </div>
+          <div class="col-2">
+            <div class="DayOfTheWk">Sat</div>
+            <div class="icon"><i class="fas fa-sun"></i></div>
+            <div class="Temperature">70°F</div>
+          </div>
+        </div>
+        <p>Coded by: Gema Volek 🐾 using <a href="https://github.com/gvolek/weather-app">GitHub</a> and hosted on <a href="https://app.netlify.com/sites/jolly-kalam-a84772/overview">Netlify<a></p>
+      </div>
     </div>
-    <script src="app.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
+
