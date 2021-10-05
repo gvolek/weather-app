@@ -55,6 +55,9 @@ p {
   list-style: none;
   text-align: left;
 }
+#description {
+  text-transform: capitalize;
+}
 
 .DayOfTheWk {
   color: whitesmoke;
