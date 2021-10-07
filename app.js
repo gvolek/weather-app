@@ -25,6 +25,27 @@ function EnterCity(event) {
 let searchForm = document.querySelector("#search-engine");
 searchForm.addEventListener("submit", EnterCity);
 
+function showdegreesC(event) {
+  event.preventDefault();
+  degreesC.classList.add("active");
+  degreesF.classList.remove("active");
+  let CurrentTemp = F;
+  let CTemp = ((F - 32) * 5) / 9;
+  alert(CTemp);
+}
+
+function showdegreesF(event) {
+  event.preventDefault();
+  degreesC.classList.remove("active");
+  degreesF.classList.add("active");
+}
+
+let degreesC = document.querySelector("#degreesC");
+degreesC.addEventListener("click", showdegreesC);
+
+let degreesF = document.querySelector("degreesF");
+degreesF.addEventListener("click", showdegreesF);
+
 function findPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;

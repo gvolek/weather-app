@@ -48,6 +48,11 @@ p {
   font-size: 16px;
   top: -5px;
 }
+#degreesF {
+  color: whitesmoke;
+  cursor: default;
+  text-decoration: none;
+}
 .CurrentDetails {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
