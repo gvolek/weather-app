@@ -29,21 +29,24 @@ function showdegreesC(event) {
   event.preventDefault();
   degreesC.classList.add("active");
   degreesF.classList.remove("active");
-  let CurrentTemp = F;
-  let CTemp = ((F - 32) * 5) / 9;
-  alert(CTemp);
+  let CTemp = ((FTemp - 32) * 5) / 9;
+  let CurrentTemp = document.querySelector("#CurrentTemp");
+  CurrentTemp.innerHTML = Math.round(CTemp);
 }
 
 function showdegreesF(event) {
   event.preventDefault();
   degreesC.classList.remove("active");
   degreesF.classList.add("active");
+  CurrentTemp.innerHTML = Math.round(FTemp);
 }
+
+let FTemp = null;
 
 let degreesC = document.querySelector("#degreesC");
 degreesC.addEventListener("click", showdegreesC);
 
-let degreesF = document.querySelector("degreesF");
+let degreesF = document.querySelector("#degreesF");
 degreesF.addEventListener("click", showdegreesF);
 
 function findPosition(position) {
