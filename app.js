@@ -33,14 +33,12 @@ function showdegreesC(event) {
   let CurrentTemp = document.querySelector("#CurrentTemp");
   CurrentTemp.innerHTML = Math.round(CTemp);
 }
-
 function showdegreesF(event) {
   event.preventDefault();
   degreesC.classList.remove("active");
   degreesF.classList.add("active");
   CurrentTemp.innerHTML = Math.round(FTemp);
 }
-
 let FTemp = null;
 
 let degreesC = document.querySelector("#degreesC");
@@ -86,5 +84,4 @@ function CurrentDate() {
   let CurrentDate = document.querySelector("#CurrentDate");
   CurrentDate.innerHTML = `${day} ${hours}:${minutes}`;
 }
-
 CurrentDate();
