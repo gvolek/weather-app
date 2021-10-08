@@ -14,6 +14,7 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  FTemp = response.data.main.temp;
 }
 function EnterCity(event) {
   event.preventDefault();
@@ -29,6 +30,7 @@ function showdegreesC(event) {
   event.preventDefault();
   degreesC.classList.add("active");
   degreesF.classList.remove("active");
+
   let CTemp = ((FTemp - 32) * 5) / 9;
   let CurrentTemp = document.querySelector("#CurrentTemp");
   CurrentTemp.innerHTML = Math.round(CTemp);
