@@ -41,10 +41,8 @@ function showdegreesF(event) {
   CurrentTemp.innerHTML = Math.round(FTemp);
 }
 let FTemp = null;
-
 let degreesC = document.querySelector("#degreesC");
 degreesC.addEventListener("click", showdegreesC);
-
 let degreesF = document.querySelector("#degreesF");
 degreesF.addEventListener("click", showdegreesF);
 
