@@ -85,4 +85,24 @@ function CurrentDate() {
   let CurrentDate = document.querySelector("#CurrentDate");
   CurrentDate.innerHTML = `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let weatherforecast = document.querySelector("#weather-forecast");
+  let weatherforecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    weatherforecastHTML =
+      weatherforecastHTML +
+      `
+          <div class="col-2">
+            <div class="DayOfTheWk">${day}</div>
+            <img src="http://openweathermap.org/img/wn/50d@2x.png" width="50"/>
+            <div class="Temperature-Max">25°F</div>
+            <div class="Temperature-Min">20°F</div>
+          </div>`;
+  });
+
+  weatherforecastHTML = weatherforecastHTML + `</div >`;
+  weatherforecast.innerHTML = weatherforecastHTML;
+}
 CurrentDate();
+displayForecast();
