@@ -92,6 +92,13 @@ function CurrentDate() {
   let CurrentDate = document.querySelector("#CurrentDate");
   CurrentDate.innerHTML = `${day} ${hours}:${minutes}`;
 }
+
+function formateDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+  return days[day];
+}
 function displayForecast(response) {
   let forecast = response.data.daily;
   let weatherforecast = document.querySelector("#weather-forecast");
@@ -102,8 +109,10 @@ function displayForecast(response) {
       weatherforecastHTML +
       `
        <div class="col-2">
-        <div class="DayOfTheWk">${forecastDay.dt}</div>
-        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="50"/>
+        <div class="DayOfTheWk">${formatDay(forecastDay.dt)}</div>
+        <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" width="50"/>
         <div class="Temperature-Max">${forecastDay.temp.max}°</div>
         <div class="Temperature-Min">${forecastDay.temp.min}°</div>
        </div>`;
