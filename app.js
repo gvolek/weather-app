@@ -110,7 +110,7 @@ function displayForecast(response) {
         weatherforecastHTML +
         `
        <div class="col-2">
-        <div class="DayOfTheWk">${formatDay(forecastDay.dt)}</div>${index}
+        <div class="DayOfTheWk">${formatDay(forecastDay.dt)}</div>
         <img src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png" width="50"/>
